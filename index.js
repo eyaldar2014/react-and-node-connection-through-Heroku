@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/routes', usersRoute);
-app.get('/')
+app.get('/', (req, res)=>{
+  res.json({success: 'sucsess'})
+})
 
 app.listen(process.env.PORT || 5000)
 
